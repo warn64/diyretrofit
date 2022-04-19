@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "$_GET": [
+      {
+        "type": "text",
+        "name": "sort"
+      },
+      {
+        "type": "text",
+        "name": "dir"
+      }
+    ]
+  },
+  "exec": {
+    "steps": {
+      "name": "queryCustomers",
+      "module": "dbconnector",
+      "action": "select",
+      "options": {
+        "sql": {
+          "type": "SELECT",
+          "columns": [
+            {
+              "table": "customer",
+              "column": "*"
+            }
+          ],
+          "table": {
+            "name": "customer"
+          },
+          "primary": "customerID",
+          "joins": [],
+          "query": "SELECT *\nFROM customer\nORDER BY firstname ASC, lastname ASC, shopname ASC",
+          "params": [],
+          "orders": [
+            {
+              "table": "customer",
+              "column": "firstname",
+              "direction": "ASC"
+            },
+            {
+              "table": "customer",
+              "column": "lastname",
+              "direction": "ASC"
+            },
+            {
+              "table": "customer",
+              "column": "shopname",
+              "direction": "ASC"
+            }
+          ]
+        },
+        "connection": "db"
+      },
+      "output": true,
+      "meta": [
+        {
+          "type": "number",
+          "name": "customerID"
+        },
+        {
+          "type": "text",
+          "name": "firstname"
+        },
+        {
+          "type": "text",
+          "name": "lastname"
+        },
+        {
+          "type": "text",
+          "name": "shopname"
+        },
+        {
+          "type": "text",
+          "name": "group"
+        },
+        {
+          "type": "text",
+          "name": "email"
+        },
+        {
+          "type": "text",
+          "name": "password"
+        },
+        {
+          "type": "text",
+          "name": "phone"
+        },
+        {
+          "type": "number",
+          "name": "address"
+        }
+      ],
+      "outputType": "array"
+    }
+  }
+}

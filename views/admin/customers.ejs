@@ -1,0 +1,104 @@
+<!-- Wappler include head-page="layouts/admin" fontawesome_5="cdn" bootstrap5="local" is="dmx-app" id="customers" appConnect="local" components="{dmxBootstrap5Modal:{},dmxBootstrap5TableGenerator:{},dmxValidator:{}}" -->
+<dmx-serverconnect id="scCustomers" url="/api/admin/customer/read"></dmx-serverconnect>
+<div class="modal fade" id="modalAddCustomer" is="dmx-bs5-modal" tabindex="-1">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add Customer</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form is="dmx-serverconnect-form" id="frmAddCustomer" method="post" action="/api/admin/customer/create" dmx-generator="bootstrap5" dmx-form-type="horizontal" dmx-on:success="modalAddCustomer.hide();notifies.success('Customer has been added');scCustomers.load()">
+                    <div class="mb-3 row">
+                        <label for="ins_firstname" class="col-sm-2 col-form-label">Firstname</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="ins_firstname" name="firstname" aria-describedby="ins_firstname_help" placeholder="Enter Firstname" required="">
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="ins_lastname" class="col-sm-2 col-form-label">Lastname</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="ins_lastname" name="lastname" aria-describedby="ins_lastname_help" placeholder="Enter Lastname">
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="ins_shopname" class="col-sm-2 col-form-label">Shopname</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="ins_shopname" name="shopname" aria-describedby="ins_shopname_help" placeholder="Enter Shopname">
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="ins_group" class="col-sm-2 col-form-label">Group</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="ins_group" name="group" aria-describedby="ins_group_help" placeholder="Enter Group">
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="ins_email" class="col-sm-2 col-form-label">Email</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="ins_email" name="email" aria-describedby="ins_email_help" placeholder="Enter Email">
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="ins_password" class="col-sm-2 col-form-label">Password</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="ins_password" name="password" aria-describedby="ins_password_help" placeholder="Enter Password">
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="ins_phone" class="col-sm-2 col-form-label">Phone</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="ins_phone" name="phone" aria-describedby="ins_phone_help" placeholder="Enter Phone">
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="ins_address" class="col-sm-2 col-form-label">Address</label>
+                        <div class="col-sm-10">
+                            <input type="number" class="form-control" id="ins_address" name="address" aria-describedby="ins_address_help" placeholder="Enter Address">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" dmx-on:click="frmAddCustomer.submit()">Add Customer</button>
+            </div>
+        </div>
+    </div>
+</div>
+<meta name="ac:route" content="/admin/customers">
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col">
+            <h2>Customers&nbsp;</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <button id="btnAddCustomer" class="btn text-light bg-primary" dmx-on:click="modalAddCustomer.show()">Add Customer</button>
+            <div class="table-responsive">
+                <table class="table table-hover table-sm">
+                    <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th class="d-none d-sm-table-cell">Shop Name</th>
+                            <th class="d-none d-sm-table-cell">Group</th>
+                            <th class="d-none d-sm-table-cell text-center">More</th>
+                        </tr>
+                    </thead>
+                    <tbody is="dmx-repeat" dmx-generator="bs5table" dmx-bind:repeat="scCustomers.data.queryCustomers" id="tableRepeat1">
+                        <tr dmx-on:click="">
+                            <td dmx-text="firstname"></td>
+                            <td dmx-text="lastname"></td>
+                            <td dmx-text="shopname" class="d-none d-sm-table-cell"></td>
+                            <td dmx-text="group" class="d-none d-sm-table-cell"></td>
+                            <td dmx-text="group" class="d-none d-sm-table-cell text-center">Edit</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

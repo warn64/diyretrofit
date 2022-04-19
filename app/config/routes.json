@@ -1,0 +1,60 @@
+{
+  "routes": [
+    {
+      "path": "/",
+      "page": "index",
+      "routeType": "page",
+      "layout": "main"
+    },
+    {
+      "path": "/admin/",
+      "page": "admin/index",
+      "layout": "admin"
+    },
+    {
+      "path": "/admin/customers",
+      "page": "admin/customers",
+      "layout": "admin"
+    },
+    {
+      "path": "/admin/categories",
+      "page": "admin/categories",
+      "layout": "admin"
+    },
+    {
+      "path": "/admin/recipes",
+      "page": "admin/recipes",
+      "layout": "admin"
+    },
+    {
+      "path": "/admin/comments",
+      "page": "admin/comments",
+      "layout": "admin"
+    },
+    {
+      "path": "/admin/users",
+      "page": "admin/users",
+      "layout": "admin"
+    },
+    {
+      "path": "/admin/customer_detail",
+      "page": "admin/customer_detail",
+      "layout": "admin"
+    },
+    {
+      "path": "/admin/products",
+      "page": "admin/products",
+      "layout": "admin"
+    },
+    {
+      "path": "/admin/product_detail",
+      "page": "admin/product_detail",
+      "layout": "admin"
+    },
+    {
+      "path": "/admin/customer_group",
+      "page": "admin/customer_group",
+      "layout": "admin"
+    }
+  ]
+}
