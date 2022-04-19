@@ -31,7 +31,8 @@
       "remoteURL": "https://diyretrofit.herokuapp.com",
       "targetType": "heroku",
       "herokuProjectID": "diyretrofit",
-      "msSQLVersion": "2019-latest"
+      "msSQLVersion": "2019-latest",
+      "usage": "production"
     },
     {
       "name": "Development",
@@ -45,7 +46,7 @@
       "databaseLoggingMaxFileSize": "10m"
     }
   ],
-  "activeTarget": "Development",
+  "activeTarget": "Production",
   "projectType": "web",
   "userUploadsFolder": "/public/uploads"
 }
