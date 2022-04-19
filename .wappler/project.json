@@ -35,11 +35,15 @@
       "msSQLVersion": "2019-latest"
     },
     {
-      "name": "Dewelopment",
+      "name": "Development",
       "remoteURL": "http://localhost:3000",
       "targetType": "wappler",
       "access": "local",
-      "localFolder": "file:///E:/Diy%20Retrofit"
+      "localFolder": "file:///E:/Diy%20Retrofit",
+      "webLoggingMaxFiles": "5",
+      "webLoggingMaxFileSize": "10m",
+      "databaseLoggingMaxFiles": "5",
+      "databaseLoggingMaxFileSize": "10m"
     }
   ],
   "activeTarget": "Production",
