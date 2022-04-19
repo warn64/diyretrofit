@@ -27,15 +27,22 @@
   "projectLinksType": "site",
   "targets": [
     {
-      "name": "Development",
+      "name": "Production",
       "remoteURL": "https://diyretrofit.herokuapp.com",
       "targetType": "heroku",
       "herokuProjectID": "diyretrofit",
       "usage": "production",
       "msSQLVersion": "2019-latest"
+    },
+    {
+      "name": "Dewelopment",
+      "remoteURL": "http://localhost:3000",
+      "targetType": "wappler",
+      "access": "local",
+      "localFolder": "file:///E:/Diy%20Retrofit"
     }
   ],
-  "activeTarget": "Development",
+  "activeTarget": "Production",
   "projectType": "web",
   "userUploadsFolder": "/public/uploads"
 }
