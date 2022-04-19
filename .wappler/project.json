@@ -30,7 +30,9 @@
       "name": "Development",
       "remoteURL": "https://diyretrofit.herokuapp.com",
       "targetType": "heroku",
-      "herokuProjectID": "diyretrofit"
+      "herokuProjectID": "diyretrofit",
+      "usage": "production",
+      "msSQLVersion": "2019-latest"
     }
   ],
   "activeTarget": "Development",
