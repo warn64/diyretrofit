@@ -46,7 +46,7 @@
       "databaseLoggingMaxFileSize": "10m"
     }
   ],
-  "activeTarget": "Production",
+  "activeTarget": "Development",
   "projectType": "web",
   "userUploadsFolder": "/public/uploads"
 }
