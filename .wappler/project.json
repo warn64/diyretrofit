@@ -31,18 +31,15 @@
       "remoteURL": "https://diyretrofit.herokuapp.com",
       "targetType": "heroku",
       "herokuProjectID": "diyretrofit",
-      "msSQLVersion": "2019-latest"
+      "msSQLVersion": "2019-latest",
+      "usage": "production"
     },
     {
       "name": "Development",
       "remoteURL": "http://localhost:3000",
       "targetType": "wappler",
       "access": "local",
-      "localFolder": "file:///E:/Diy%20Retrofit",
-      "webLoggingMaxFiles": "5",
-      "webLoggingMaxFileSize": "10m",
-      "databaseLoggingMaxFiles": "5",
-      "databaseLoggingMaxFileSize": "10m"
+      "localFolder": "file:///E:/Diy%20Retrofit"
     }
   ],
   "activeTarget": "Production",
