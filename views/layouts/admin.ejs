@@ -33,18 +33,76 @@
         <div class="offcanvas-body">
             <div class="row">
                 <div class="col">
-                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                        <li class="nav-item text-secondary bg-white">
+                            <a href="admin/" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">เมนูจัดการร้าน</span> </a>
+                        </li>
+                        <li class="nav-item text-secondary bg-white">
+                        </li>
+                        <li>
+                            <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle text-secondary">จัดการสินค้า&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<i class="fas fa-caret-down"></i>
+                            </a>
+                            <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a href="admin/products" class="nav-link px-0 text-secondary" internal>สินค้า</a>
+                                </li>
+                                <li>
+                                    <a href="admin/product_detail" class="nav-link px-0 text-secondary" internal>กลุ่มสินค้า</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                        </li>
+                        <li>
+                            <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">จัดการลูกค้า&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<i class="fas fa-caret-down">&nbsp;</i></a>
+                            <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a href="admin/customers" class="nav-link px-0" internal>ลูกค้า</a>
+                                </li>
+                                <li>
+                                    <a href="admin/customer_group" class="nav-link px-0" internal>กลุ่มลูกค้า</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Products</span> </a>
+                            <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 1</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 2</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 3</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 4</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+
+                        </li>
+                    </ul>
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-expand">
+
                         <div class="navbar-nav flex-column">
+
                             <a class="nav-item nav-link active" href="/admin/" internal id="">Home</a>
                             <a class="nav-item nav-link" href="admin/products" internal>Products</a><a class="nav-item nav-link" href="admin/product_detail" internal>Product Detail</a><a class="nav-item nav-link" href="/admin/customers" internal>Customers</a><a class="nav-item nav-link" href="/admin/categories" internal>Categories</a>
                             <a class="nav-item nav-link" href="/admin/recipes" internal>Recipes</a>
                             <a class="nav-item nav-link" href="/admin/comments" internal>Comments</a>
+                            <a class="nav-item nav-link" href="/admin/users">Users</a>
                             <a class="nav-item nav-link" href="/admin/users">Users</a>
 
 
 
                         </div>
                     </nav>
+
                 </div>
             </div>
         </div>
@@ -53,7 +111,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col">
-                    <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center justify-content-between">
                         <button id="btnShowOC" class="btn pt-0 pb-0 ps-0 pe-0" dmx-on:click="offcanvas1.show()"><i class="fas fa-align-left fa-lg"></i><br></button>
 
                         <h1 class="h4 mt-1 mb-1 text-secondary">Diy Retrofit Co.,Ltd.</h1>

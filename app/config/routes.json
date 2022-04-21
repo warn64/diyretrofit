@@ -55,6 +55,16 @@
       "path": "/admin/customer_group",
       "page": "admin/customer_group",
       "layout": "admin"
+    },
+    {
+      "path": "/admin/expense_group",
+      "page": "admin/expense_group",
+      "layout": "admin"
+    },
+    {
+      "path": "/admin/expenses",
+      "page": "admin/expenses",
+      "layout": "admin"
     }
   ]
 }

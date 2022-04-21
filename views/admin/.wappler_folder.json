@@ -38,5 +38,17 @@
   "customer_group.ejs": {
     "layoutPage": "admin",
     "description": ""
+  },
+  "Expenses.ejs": {
+    "layoutPage": "admin",
+    "description": ""
+  },
+  "expense_group.ejs": {
+    "layoutPage": "admin",
+    "description": ""
+  },
+  "expenses.ejs": {
+    "layoutPage": "admin",
+    "description": ""
   }
 }

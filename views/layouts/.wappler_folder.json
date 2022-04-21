@@ -1,8 +1,8 @@
 {
-  "admin.ejs": {
+  "test.ejs": {
     "description": ""
   },
-  "test.ejs": {
+  "admin.ejs": {
     "description": ""
   }
 }
