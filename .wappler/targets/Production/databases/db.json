@@ -80,6 +80,10 @@
               "unique": false
             }
           }
+        },
+        "refs": {
+          "recipe": "userID",
+          "comment": "userID"
         }
       },
       "category": {
@@ -108,6 +112,9 @@
               "nullable": true
             }
           }
+        },
+        "refs": {
+          "recipe": "categoryID"
         }
       },
       "recipe": {
@@ -198,6 +205,9 @@
               "nullable": true
             }
           }
+        },
+        "refs": {
+          "comment": "recipeID"
         }
       },
       "comment": {
@@ -332,6 +342,91 @@
               "nullable": true
             }
           }
+        }
+      },
+      "expense_group": {
+        "db": {},
+        "columns": {
+          "expense_groupID": {
+            "db": {
+              "type": "increments",
+              "primary": true,
+              "unique": false,
+              "nullable": false
+            }
+          },
+          "expenseID": {
+            "db": {
+              "type": "reference",
+              "primary": false,
+              "unique": false,
+              "nullable": true,
+              "references": "expenseID",
+              "inTable": "expense",
+              "onUpdate": "CASCADE",
+              "onDelete": "CASCADE"
+            }
+          },
+          "expense_group_name": {
+            "db": {
+              "type": "string",
+              "maxLength": 255,
+              "primary": false,
+              "unique": false,
+              "nullable": true
+            }
+          },
+          "note": {
+            "db": {
+              "type": "string",
+              "maxLength": 255,
+              "primary": false,
+              "unique": false,
+              "nullable": true
+            }
+          }
+        },
+        "parent": "expense"
+      },
+      "expense": {
+        "db": {},
+        "columns": {
+          "expenseID": {
+            "db": {
+              "type": "increments",
+              "primary": true,
+              "unique": false,
+              "nullable": false
+            }
+          },
+          "date": {
+            "db": {
+              "type": "date",
+              "default": "knex.fn.now()",
+              "primary": false,
+              "unique": false,
+              "nullable": true
+            }
+          },
+          "expense_amount": {
+            "db": {
+              "type": "float",
+              "primary": false,
+              "unique": false,
+              "nullable": true
+            }
+          },
+          "expense_note": {
+            "db": {
+              "type": "text",
+              "primary": false,
+              "unique": false,
+              "nullable": true
+            }
+          }
+        },
+        "sub": {
+          "expense_group": "expenseID"
         }
       }
     },

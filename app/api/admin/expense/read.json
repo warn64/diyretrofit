@@ -36,17 +36,20 @@
             {
               "table": "expense",
               "column": "date",
-              "direction": "ASC"
+              "direction": "ASC",
+              "recid": 1
             },
             {
               "table": "group",
               "column": "expenseID",
-              "direction": "ASC"
+              "direction": "ASC",
+              "recid": 2
             },
             {
               "table": "expense",
               "column": "expense_amount",
-              "direction": "ASC"
+              "direction": "ASC",
+              "recid": 3
             }
           ]
         },

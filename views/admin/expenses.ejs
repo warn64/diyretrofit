@@ -5,34 +5,41 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header text-light bg-primary">
-                <h5 class="modal-title">Add Expense</h5>
+                <h5 class="modal-title">เพิ่มค่าใช้จ่าย</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <form is="dmx-serverconnect-form" id="frmAddExpense" method="post" action="/api/admin/expense/create" dmx-generator="bootstrap5" dmx-form-type="horizontal" dmx-on:success="modalAddExpense.hide();notifies.success('Expense has been addes.');scExpense.load()">
                     <div class="form-group mb-3 row">
-                        <label for="ins_date" class="col-sm-2 col-form-label">Date</label>
+                        <label for="ins_date" class="col-sm-2 col-form-label">วันที่</label>
                         <div class="col-sm-10">
                             <input type="date" class="form-control" id="ins_date" name="date" aria-describedby="ins_date_help" placeholder="Enter Date" required="">
                         </div>
                     </div>
                     <div class="form-group mb-3 row">
-                        <label for="ins_expense_amount" class="col-sm-2 col-form-label">Amount</label>
+                        <label for="ins_expense_amount" class="col-sm-2 col-form-label">จำนวน</label>
                         <div class="col-sm-10">
                             <input type="number" class="form-control" id="ins_expense_amount" name="expense_amount" aria-describedby="ins_expense_amount_help" placeholder="Enter Expense amount" required="">
                         </div>
                     </div>
                     <div class="form-group mb-3 row">
-                        <label for="ins_expense_note" class="col-sm-2 col-form-label">Note</label>
+                        <label for="ins_expense_group" class="col-sm-2 col-form-label">ประเภท</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="ins_expense_group" name="expense_group" aria-describedby="ins_expense_note_help" placeholder="Enter Expense Group">
+                        </div>
+                    </div>
+                    <div class="form-group mb-3 row">
+                        <label for="ins_expense_note" class="col-sm-2 col-form-label">บันทึก</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="ins_expense_note" name="expense_note" aria-describedby="ins_expense_note_help" placeholder="Enter Expense note">
                         </div>
                     </div>
+
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" dmx-on:click="frmAddExpense.submit()">Add Expense</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                <button type="button" class="btn btn-primary" dmx-on:click="frmAddExpense.submit()">เพิ่มค่าใช้จ่าย</button>
             </div>
         </div>
     </div>
@@ -44,7 +51,7 @@
         <div class="col">
 
             <h2>รายจ่าย</h2>
-            <button id="AddExpensebtn" class="btn text-light bg-primary" dmx-on:click="modalAddExpense.show()">เพิ่มรายจ่าย</button>
+            <button id="AddExpensebtn" class="btn text-light bg-primary" dmx-on:click="modalAddExpense.frmAddExpense.reset();modalAddExpense.show()">เพิ่มรายจ่าย</button>
         </div>
     </div>
     <div class="row">

@@ -23,6 +23,10 @@
       {
         "type": "text",
         "name": "expense_note"
+      },
+      {
+        "type": "number",
+        "name": "expense_group"
       }
     ]
   },
@@ -53,26 +57,17 @@
               "column": "expense_note",
               "type": "text",
               "value": "{{$_POST.expense_note}}"
+            },
+            {
+              "table": "expense",
+              "column": "expense_group",
+              "type": "number",
+              "value": "{{$_POST.expense_group}}"
             }
           ],
           "table": "expense",
-          "sub": {
-            "group": {
-              "type": "insert",
-              "table": "expense_group",
-              "key": "expenseID",
-              "values": [
-                {
-                  "table": "expense_group",
-                  "column": "expense_group_name",
-                  "type": "text"
-                }
-              ],
-              "value": "{{$_POST.group}}"
-            }
-          },
           "returning": "expenseID",
-          "query": "INSERT INTO expense\n(date, expense_amount, expense_note) VALUES (:P1 /* {{$_POST.date}} */, :P2 /* {{$_POST.expense_amount}} */, :P3 /* {{$_POST.expense_note}} */)",
+          "query": "INSERT INTO expense\n(date, expense_amount, expense_note, expense_group) VALUES (:P1 /* {{$_POST.date}} */, :P2 /* {{$_POST.expense_amount}} */, :P3 /* {{$_POST.expense_note}} */, :P4 /* {{$_POST.expense_group}} */)",
           "params": [
             {
               "name": ":P1",
@@ -88,6 +83,11 @@
               "name": ":P3",
               "type": "expression",
               "value": "{{$_POST.expense_note}}"
+            },
+            {
+              "name": ":P4",
+              "type": "expression",
+              "value": "{{$_POST.expense_group}}"
             }
           ]
         }
