@@ -30,26 +30,18 @@
           },
           "primary": "expenseID",
           "joins": [],
-          "query": "SELECT *\nFROM expense\nORDER BY date ASC, expenseID ASC, expense_amount ASC",
+          "query": "SELECT *\nFROM expense\nORDER BY date ASC, expense_amount ASC",
           "params": [],
           "orders": [
             {
               "table": "expense",
               "column": "date",
-              "direction": "ASC",
-              "recid": 1
-            },
-            {
-              "table": "group",
-              "column": "expenseID",
-              "direction": "ASC",
-              "recid": 2
+              "direction": "ASC"
             },
             {
               "table": "expense",
               "column": "expense_amount",
-              "direction": "ASC",
-              "recid": 3
+              "direction": "ASC"
             }
           ]
         },
@@ -72,6 +64,10 @@
         {
           "type": "text",
           "name": "expense_note"
+        },
+        {
+          "type": "number",
+          "name": "expense_group"
         }
       ],
       "outputType": "array"
