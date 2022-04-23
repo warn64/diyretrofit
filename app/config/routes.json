@@ -65,6 +65,11 @@
       "path": "/admin/expenses",
       "page": "admin/expenses",
       "layout": "admin"
+    },
+    {
+      "path": "/admin/report_expense_01",
+      "page": "admin/report_expense_01",
+      "layout": "admin"
     }
   ]
 }

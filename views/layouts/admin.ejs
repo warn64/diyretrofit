@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="/dmxAppConnect/dmxBootstrap5TableGenerator/dmxBootstrap5TableGenerator.css" />
     <script src="/dmxAppConnect/dmxDataTraversal/dmxDataTraversal.js" defer=""></script>
     <script src="/dmxAppConnect/dmxFormatter/dmxFormatter.js" defer=""></script>
+    <script src="/dmxAppConnect/dmxCharts/Chart.min.js" defer=""></script>
+    <script src="/dmxAppConnect/dmxCharts/dmxCharts.js" defer=""></script>
 </head>
 
 <body is="dmx-app" id="admin">
@@ -81,6 +83,15 @@
                                 <li class="w-100">
                                     <a href="admin/users" class="nav-link px-0" internal>พนักงาน</a>
                                     <a href="#" class="nav-link px-0">แผนก</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#subReports" data-bs-toggle="collapse" class="nav-link px-0 align-middle"><i class="fas fa-chevron-circle-down"></i>&nbsp;รายงาน</a>
+                            <ul class="collapse nav flex-column ms-1" id="subReports" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a href="admin/report_expense_01" class="nav-link px-0" internal>รายจ่าย</a>
                                 </li>
 
                             </ul>

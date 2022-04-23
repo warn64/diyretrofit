@@ -1,0 +1,37 @@
+<!-- Wappler include head-page="layouts/admin" fontawesome_5="cdn" bootstrap5="local" is="dmx-app" id="report_expense_01" appConnect="local" components="{dmxCharts:{},dmxBootstrap5TableGenerator:{}}" -->
+<dmx-serverconnect id="scExpense" url="/api/admin/expense/read"></dmx-serverconnect>
+<meta name="ac:route" content="/admin/report_expense_01">
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col">
+            <h2>รายงานรายจ่าย</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="table-responsive">
+                <table class="table table-hover table-sm">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Expense amount</th>
+                            <th>Expense note</th>
+                        </tr>
+                    </thead>
+                    <tbody is="dmx-repeat" dmx-generator="bs5table" dmx-bind:repeat="scExpense.data.queryExpenses" id="tableRepeat1">
+                        <tr>
+                            <td dmx-text="date"></td>
+                            <td dmx-text="expense_amount"></td>
+                            <td dmx-text="expense_note"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col">
+            <dmx-chart id="chart1" dmx-bind:data="scExpense.data.queryExpenses" dataset-1:value="expense_amount" smooth="true" point-size="" type="area" responsive="true" width="400" height="200" colors="colors2" thickness="3" dataset-1:label="ค่าใช้จ่าย" labels="date"></dmx-chart>
+        </div>
+
+    </div>
+</div>

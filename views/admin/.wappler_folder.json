@@ -50,5 +50,9 @@
   "expenses.ejs": {
     "layoutPage": "admin",
     "description": ""
+  },
+  "report_expense_01.ejs": {
+    "layoutPage": "admin",
+    "description": ""
   }
 }
