@@ -32,57 +32,63 @@
         </div>
         <div class="offcanvas-body">
             <div class="row">
-                <div class="col">
-                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
-                        <li class="nav-item text-secondary bg-white">
-                            <a href="admin/" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">เมนูจัดการร้าน</span> </a>
-                        </li>
-                        <li class="nav-item text-secondary bg-white">
-                        </li>
+                <div class="col-xxl-12 col-12">
+                    <ul class="nav flex-column mb-sm-auto mb-0 align-items-start align-items-sm-start nav-pills" id="menu">
                         <li>
-                            <a href="#subProducts" data-bs-toggle="collapse" class="nav-link px-0 align-middle text-secondary" internal><i class="fas fa-chevron-circle-down"></i>&nbsp;สินค้าและหมวดหมู่&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a>
-                            <ul class="collapse show nav flex-column ms-1" id="subProducts" data-bs-parent="#menu">
+                            <a href="#subMain" data-bs-toggle="collapse" class="nav-link px-0 align-middle" internal><i class="fas fa-chevron-circle-down"></i>&nbsp;เมนูจัดการร้าน</a>
+                            <ul class="collapse nav flex-column ms-1" id="subMain" data-bs-parent="#menu">
                                 <li class="w-100">
-                                    <a href="admin/products" class="nav-link px-0 text-secondary" internal>สินค้า
-                                    </a>
-                                    <a href="admin/product_detail" class="nav-link px-0 text-secondary" internal>กลุ่มสินค้า</a>
+                                    <a href="admin/" class="nav-link px-0" internal>หน้าหลัก</a>
+                                    <a href="admin/product_detail" class="nav-link px-0" internal>รายการขาย</a>
                                 </li>
+
                             </ul>
                         </li>
                         <li>
+                            <a href="#subProducts" data-bs-toggle="collapse" class="nav-link px-0 align-middle" internal><i class="fas fa-chevron-circle-down"></i>&nbsp;การบริหารสินค้า</a>
+                            <ul class="collapse nav flex-column ms-1" id="subProducts" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a href="admin/products" class="nav-link px-0" internal>สินค้า</a>
+                                    <a href="admin/product_detail" class="nav-link px-0" internal>หมวดหมู่สินค้า</a>
+                                </li>
+
+                            </ul>
                         </li>
+
                         <li>
-                            <a href="#subCustomers" data-bs-toggle="collapse" class="nav-link px-0 align-middle " internal><i class="fas fa-chevron-circle-down"></i>&nbsp;การบริหารลูกค้า&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</a>
+                            <a href="#subCustomers" data-bs-toggle="collapse" class="nav-link px-0 align-middle "><i class="fas fa-chevron-circle-down"></i>&nbsp;การบริหารลูกค้า</a>
                             <ul class="collapse nav flex-column ms-1" id="subCustomers" data-bs-parent="#menu">
                                 <li class="w-100">
                                     <a href="admin/customers" class="nav-link px-0" internal>ลูกค้า</a>
                                     <a href="admin/customer_group" class="nav-link px-0" internal>กลุ่มลูกค้า</a>
                                 </li>
+
                             </ul>
                         </li>
                         <li>
-                            <a href="#subExpenses" data-bs-toggle="collapse" class="nav-link px-0 align-middle" internal><i class="fas fa-chevron-circle-down"></i>&nbsp;การบริหารค่าใช้จ่าย</a>
+                            <a href="#subExpenses" data-bs-toggle="collapse" class="nav-link px-0 align-middle"><i class="fas fa-chevron-circle-down"></i>&nbsp;การบริหารค่าใช้จ่าย</a>
                             <ul class="collapse nav flex-column ms-1" id="subExpenses" data-bs-parent="#menu">
                                 <li class="w-100">
-                                    <a href="admin/expenses" class="nav-link px-0" internal>ค่าใช้จ่าย</a>
-                                    <a href="admin/expense_group" class="nav-link px-0" internal="">ประเภทค่าใช้จ่าย</a>
+                                    <a href="admin/expenses" class="nav-link px-0" internal>รายจ่าย</a>
+                                    <a href="admin/expense_group" class="nav-link px-0" internal>กลุ่มรายจ่าย</a>
                                 </li>
+
                             </ul>
                         </li>
                         <li>
-                            <a href="#subAdmin" data-bs-toggle="collapse" class="nav-link px-0 align-middle" internal><i class="fas fa-chevron-circle-down"></i>&nbsp;การบริหารพนักงาน</a>
-                            <ul class="collapse nav flex-column ms-1" id="subAdmin" data-bs-parent="#menu">
+                            <a href="#subAdmins" data-bs-toggle="collapse" class="nav-link px-0 align-middle"><i class="fas fa-chevron-circle-down"></i>&nbsp;การบริหารพนักงาน</a>
+                            <ul class="collapse nav flex-column ms-1" id="subAdmins" data-bs-parent="#menu">
                                 <li class="w-100">
                                     <a href="admin/users" class="nav-link px-0" internal>พนักงาน</a>
-                                    <a href="#" class="nav-link px-0" internal="">แผนก</a>
+                                    <a href="#" class="nav-link px-0">แผนก</a>
                                 </li>
+
                             </ul>
                         </li>
                         <li>
-
                         </li>
                     </ul>
+
                     <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-expand">
 
                         <div class="navbar-nav flex-column">
