@@ -1,4 +1,4 @@
-<!-- Wappler include head-page="layouts/admin" fontawesome_5="cdn" bootstrap5="local" is="dmx-app" id="report_expense_01" appConnect="local" components="{dmxCharts:{},dmxBootstrap5TableGenerator:{}}" -->
+<!-- Wappler include head-page="layouts/admin" fontawesome_5="cdn" bootstrap5="local" is="dmx-app" id="report_expense_01" appConnect="local" components="{dmxCharts:{},dmxBootstrap5TableGenerator:{},dmxFormatter:{}}" -->
 <dmx-serverconnect id="scExpense" url="/api/admin/expense/read"></dmx-serverconnect>
 <meta name="ac:route" content="/admin/report_expense_01">
 <div class="container-fluid">
@@ -25,7 +25,7 @@
                     <tbody is="dmx-repeat" dmx-generator="bs5table" dmx-bind:repeat="scExpense.data.queryExpenses" id="tableRepeat1">
                         <tr>
                             <td dmx-text="date"></td>
-                            <td dmx-text="expense_amount" class="text-end"></td>
+                            <td dmx-text="expense_amount.formatNumber(2, '.', ',')" class="text-end"></td>
                             <td dmx-text="expense_note"></td>
                         </tr>
                     </tbody>

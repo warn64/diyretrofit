@@ -68,7 +68,7 @@
                     <tbody is="dmx-repeat" dmx-generator="bs5table" dmx-bind:repeat="scExpense.data.queryExpenses" id="tableRepeat1">
                         <tr dmx-class:bg-primary="(expenseID == data_detailExpense.data.expenseID)" dmx-class:text-light="(expenseID == data_detailExpense.data.expenseID)" dmx-on:click="data_detailExpense.select(expenseID)">
                             <td dmx-text="date"></td>
-                            <td dmx-text="expense_amount" class="text-end"></td>
+                            <td dmx-text="expense_amount.formatNumber(2, '.', ',')" class="text-end"></td>
                             <td dmx-text="expense_note"></td>
                         </tr>
                     </tbody>
@@ -85,7 +85,7 @@
                         </tr>
                         <tr>
                             <th>จำนวน</th>
-                            <td dmx-text="data_detailExpense.data.expense_amount"></td>
+                            <td dmx-text="data_detailExpense.data.expense_amount.formatNumber(2, '.', ',')"></td>
                         </tr>
                         <tr>
                             <th>ประเภท</th>
