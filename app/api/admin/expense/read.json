@@ -1,0 +1,77 @@
+{
+  "meta": {
+    "$_GET": [
+      {
+        "type": "text",
+        "name": "sort"
+      },
+      {
+        "type": "text",
+        "name": "dir"
+      }
+    ]
+  },
+  "exec": {
+    "steps": {
+      "name": "queryExpenses",
+      "module": "dbconnector",
+      "action": "select",
+      "options": {
+        "sql": {
+          "type": "SELECT",
+          "columns": [
+            {
+              "table": "expense",
+              "column": "*"
+            }
+          ],
+          "table": {
+            "name": "expense"
+          },
+          "primary": "expenseID",
+          "joins": [],
+          "query": "SELECT *\nFROM expense\nORDER BY date ASC, expenseID ASC, expense_amount ASC",
+          "params": [],
+          "orders": [
+            {
+              "table": "expense",
+              "column": "date",
+              "direction": "ASC"
+            },
+            {
+              "table": "group",
+              "column": "expenseID",
+              "direction": "ASC"
+            },
+            {
+              "table": "expense",
+              "column": "expense_amount",
+              "direction": "ASC"
+            }
+          ]
+        },
+        "connection": "db"
+      },
+      "output": true,
+      "meta": [
+        {
+          "type": "number",
+          "name": "expenseID"
+        },
+        {
+          "type": "date",
+          "name": "date"
+        },
+        {
+          "type": "number",
+          "name": "expense_amount"
+        },
+        {
+          "type": "text",
+          "name": "expense_note"
+        }
+      ],
+      "outputType": "array"
+    }
+  }
+}

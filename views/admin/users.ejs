@@ -14,16 +14,16 @@
             <div class="modal-body">
                 <form is="dmx-serverconnect-form" id="frmAddUser" method="post" action="/api/admin/users/create" dmx-generator="bootstrap5" dmx-form-type="vertical" dmx-on:success="modalAddUser.hide();notifies.success('User has been added');scUsers.load()">
                     <div class="mb-3">
-                        <label for="ins_firstname">Firstname</label>
-                        <input type="text" class="form-control" id="ins_firstname" name="firstname" aria-describedby="ins_firstname_help" placeholder="Enter Firstname">
+                        <label for="ins_firstname">First Name</label>
+                        <input type="text" class="form-control" id="ins_firstname" name="firstname" aria-describedby="ins_firstname_help" placeholder="First Name">
                     </div>
                     <div class="mb-3">
-                        <label for="ins_lastname">Lastname</label>
-                        <input type="text" class="form-control" id="ins_lastname" name="lastname" aria-describedby="ins_lastname_help" placeholder="Enter Lastname">
+                        <label for="ins_lastname">Last Name</label>
+                        <input type="text" class="form-control" id="ins_lastname" name="lastname" aria-describedby="ins_lastname_help" placeholder="Last Name">
                     </div>
                     <div class="mb-3">
                         <label for="ins_email">Email</label>
-                        <input type="text" class="form-control" id="ins_email" name="email" aria-describedby="ins_email_help" placeholder="Enter Email">
+                        <input type="text" class="form-control" id="ins_email" name="email" aria-describedby="ins_email_help" placeholder="Email">
                     </div>
                     <div class="mb-3">
                         <label for="ins_password">Password</label>

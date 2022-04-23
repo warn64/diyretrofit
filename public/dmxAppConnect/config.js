@@ -37,5 +37,28 @@ dmx.config({
       ],
       "outputType": "array"
     }
+  },
+  "expenses": {
+    "data_detailExpense": {
+      "meta": [
+        {
+          "type": "number",
+          "name": "expenseID"
+        },
+        {
+          "type": "date",
+          "name": "date"
+        },
+        {
+          "type": "number",
+          "name": "expense_amount"
+        },
+        {
+          "type": "text",
+          "name": "expense_note"
+        }
+      ],
+      "outputType": "array"
+    }
   }
 });

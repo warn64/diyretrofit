@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "$_POST": [
+      {
+        "type": "date",
+        "options": {
+          "rules": {
+            "core:required": {},
+            "core:date": {}
+          }
+        },
+        "name": "date"
+      },
+      {
+        "type": "number",
+        "options": {
+          "rules": {
+            "core:required": {}
+          }
+        },
+        "name": "expense_amount"
+      },
+      {
+        "type": "text",
+        "name": "expense_note"
+      }
+    ]
+  },
+  "exec": {
+    "steps": {
+      "name": "insertExpense",
+      "module": "dbupdater",
+      "action": "insert",
+      "options": {
+        "connection": "db",
+        "sql": {
+          "type": "insert",
+          "values": [
+            {
+              "table": "expense",
+              "column": "date",
+              "type": "date",
+              "value": "{{$_POST.date}}"
+            },
+            {
+              "table": "expense",
+              "column": "expense_amount",
+              "type": "number",
+              "value": "{{$_POST.expense_amount}}"
+            },
+            {
+              "table": "expense",
+              "column": "expense_note",
+              "type": "text",
+              "value": "{{$_POST.expense_note}}"
+            }
+          ],
+          "table": "expense",
+          "sub": {
+            "group": {
+              "type": "insert",
+              "table": "expense_group",
+              "key": "expenseID",
+              "values": [
+                {
+                  "table": "expense_group",
+                  "column": "expense_group_name",
+                  "type": "text"
+                }
+              ],
+              "value": "{{$_POST.group}}"
+            }
+          },
+          "returning": "expenseID",
+          "query": "INSERT INTO expense\n(date, expense_amount, expense_note) VALUES (:P1 /* {{$_POST.date}} */, :P2 /* {{$_POST.expense_amount}} */, :P3 /* {{$_POST.expense_note}} */)",
+          "params": [
+            {
+              "name": ":P1",
+              "type": "expression",
+              "value": "{{$_POST.date}}"
+            },
+            {
+              "name": ":P2",
+              "type": "expression",
+              "value": "{{$_POST.expense_amount}}"
+            },
+            {
+              "name": ":P3",
+              "type": "expression",
+              "value": "{{$_POST.expense_note}}"
+            }
+          ]
+        }
+      },
+      "meta": [
+        {
+          "name": "identity",
+          "type": "text"
+        },
+        {
+          "name": "affected",
+          "type": "number"
+        }
+      ]
+    }
+  }
+}
