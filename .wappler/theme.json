@@ -1,0 +1,11 @@
+{
+  "bootstrap5": {
+    "basic": {
+      "headings-font-family": "Kanit:400",
+      "font-family-base": "Kanit:400",
+      "font-family-sans-serif": "Kanit:400",
+      "font-family-monospace": "Kanit:400"
+    },
+    "advanced": {}
+  }
+}
