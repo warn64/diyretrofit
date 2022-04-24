@@ -18,12 +18,15 @@
     <script src="/dmxAppConnect/dmxValidator/dmxValidator.js" defer=""></script>
     <link rel="stylesheet" href="/dmxAppConnect/dmxNotifications/dmxNotifications.css" />
     <script src="/dmxAppConnect/dmxNotifications/dmxNotifications.js" defer=""></script>
+    <script src="/dmxAppConnect/dmxBrowser/dmxBrowser.js" defer=""></script>
+    <script src="/dmxAppConnect/dmxFormatter/dmxFormatter.js" defer=""></script>
 </head>
 
 <body is="dmx-app" id="main">
     <dmx-serverconnect id="scUserLoggedin" url="/api/security/user_loggedin"></dmx-serverconnect>
     <dmx-serverconnect id="scLogout" url="/api/security/user_logout" noload></dmx-serverconnect>
     <dmx-notifications id="notifies1"></dmx-notifications>
+    <div is="dmx-browser" id="browser1"></div>
 
     <header class="bg-light">
         <div class="container">
@@ -72,7 +75,7 @@
                             <div class="tab-content" id="navTabs1_content">
                                 <div class="tab-pane fade show active" id="navTabs1_1" role="tabpanel">
                                     <div class="container-fluid">
-                                        <form id="frmLogin" method="post" is="dmx-serverconnect-form" action="/api/security/user_login" dmx-on:success="scUserLoggedin.load();notifies1.success('You are now logged in.');modalLoginRegister.hide()" dmx-on:unauthorized="notifies1.danger('Your detail are not correct.')">
+                                        <form id="frmLogin" method="post" is="dmx-serverconnect-form" action="/api/security/user_login" dmx-on:success="scUserLoggedin.load();notifies1.success('You are now logged in.');modalLoginRegister.hide();browser1.goto((frmLogin.data.queryUser.group == 3 ? 'admin/' : browser1.referrer))" dmx-on:unauthorized="notifies1.danger('Your detail are not correct.')">
                                             <div class="row">
                                                 <div class="col">
                                                     <div class="row">
