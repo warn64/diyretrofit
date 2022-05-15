@@ -38,10 +38,12 @@
       "remoteURL": "https://diyretrofit.herokuapp.com",
       "targetType": "heroku",
       "usage": "production",
-      "herokuProjectID": "diyretrofit"
+      "herokuProjectID": "diyretrofit",
+      "msSQLVersion": "2019-latest"
     }
   ],
   "activeTarget": "Production",
   "projectType": "web",
-  "userUploadsFolder": "/public/uploads"
+  "userUploadsFolder": "/public/uploads",
+  "activeGitRemote": "heroku"
 }
