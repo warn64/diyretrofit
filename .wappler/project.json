@@ -35,7 +35,7 @@
     },
     {
       "name": "Production",
-      "remoteURL": "https://diyretrofit.herokuapp.com",
+      "remoteURL": "https://git.heroku.com/diyretrofit.git",
       "targetType": "heroku",
       "usage": "production",
       "herokuProjectID": "diyretrofit",
