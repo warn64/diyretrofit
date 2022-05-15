@@ -4,5 +4,8 @@
   },
   "admin1.ejs": {
     "description": ""
+  },
+  "main.ejs": {
+    "description": ""
   }
 }

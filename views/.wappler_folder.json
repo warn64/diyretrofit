@@ -1,0 +1,14 @@
+{
+  "About.ejs": {
+    "layoutPage": "main",
+    "description": ""
+  },
+  "contact.ejs": {
+    "layoutPage": "main",
+    "description": ""
+  },
+  "products.ejs": {
+    "layoutPage": "main",
+    "description": ""
+  }
+}

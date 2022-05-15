@@ -70,6 +70,21 @@
       "path": "/admin/report_expense_01",
       "page": "admin/report_expense_01",
       "layout": "admin"
+    },
+    {
+      "path": "/About",
+      "page": "About",
+      "layout": "main"
+    },
+    {
+      "path": "/contact",
+      "page": "contact",
+      "layout": "main"
+    },
+    {
+      "path": "/products",
+      "page": "products",
+      "layout": "main"
     }
   ]
 }

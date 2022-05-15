@@ -39,9 +39,10 @@
                         </button>
                         <div class="collapse navbar-collapse justify-content-between" id="navbar1_collapse">
                             <div class="navbar-nav justify-content-between">
-                                <a class="nav-item nav-link active" href="#">Home</a>
-                                <a class="nav-item nav-link" href="#">About</a>
-                                <a class="nav-item nav-link" href="#">
+                                <a class="nav-item nav-link active" internal href="/">Home</a>
+                                <a class="nav-item nav-link" href="products" internal>Products</a>
+                                <a class="nav-item nav-link" href="about" internal="">About</a>
+                                <a class="nav-item nav-link" href="contact" internal>
                                     Contact</a>
                             </div>
                             <button id="btn1" class="btn" dmx-show="scUserLoggedin.data.identity" dmx-on:click="scLogout.load();scUserLoggedin.reset();notifies1.success('You are now logged out.')">Logout</button>
@@ -57,6 +58,29 @@
         <div is="dmx-view" id="content">
             <%- await include(content, locals); %>
         </div>
+        <footer class="container">
+
+            <div class="row">
+                <div class="col">
+
+                    <h5>About</h5>
+                    <p>A nice paragraph</p>
+                </div>
+                <div class="col">
+
+                    <h5>Help</h5>
+                    <p>A nice paragraph</p>
+                </div>
+                <div class="col">
+
+                    <h5>
+                        Contact Us
+                    </h5>
+                    <p>Email : diyretrofit@gmail.com<br>Mobile : 094-689-3965<br>Line ID : @diyretrofit</p>
+                </div>
+            </div>
+            <h6 class="text-center">Copy Right Diy Retrofit Co.,Ltd.</h6>
+        </footer>
     </main>
     <div class="modal fade" id="modalLoginRegister" is="dmx-bs5-modal" tabindex="-1" dmx-on:hide-bs-modal="frmRegister.reset()">
         <div class="modal-dialog" role="document">
