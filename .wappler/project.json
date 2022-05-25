@@ -35,14 +35,11 @@
     },
     {
       "name": "Production",
-      "remoteURL": "https://git.heroku.com/diyretrofit.git",
+      "remoteURL": "https://diyretrofit.herokuapp.com",
       "targetType": "heroku",
       "usage": "production",
       "msSQLVersion": "2019-latest",
-      "webLoggingMaxFiles": "5",
-      "webLoggingMaxFileSize": "10m",
-      "databaseLoggingMaxFiles": "5",
-      "databaseLoggingMaxFileSize": "10m"
+      "herokuProjectID": "diyretrofit"
     }
   ],
   "activeTarget": "Production",
